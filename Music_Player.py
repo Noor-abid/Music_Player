@@ -12,4 +12,7 @@ class Player:
         Load.place(x=0, y=20); Play.place(x=110, y=20); Pause.place(x=220, y=20); Stop.place(x=110, y=60)
         self.music_file=False
         self.playing_state=False
+        def load(self):
+            self.music_file=filedialog.askopenfilename()
+            
 
