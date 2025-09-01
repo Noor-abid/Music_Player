@@ -4,7 +4,7 @@ import time
 # Initialize mixer
 mixer.init()
 
-# Load music file (must be in the same folder)
+# Load music file
 mixer.music.load("21.mp3")
 
 # Play music
@@ -14,5 +14,5 @@ mixer.music.play()
 while mixer.music.get_busy():
     time.sleep(1)
 
-# # Stop (it will stop automatically when the song ends)
-# mixer.music.stop()
+# Stop (it will stop automatically when the song ends)
+mixer.music.stop()
