@@ -1,8 +1,18 @@
 from pygame import mixer
+import time
 
+# Initialize mixer
 mixer.init()
 
-mixer.music.load('21.mp3') #Loading audio File
+# Load music file (must be in the same folder)
+mixer.music.load("21.mp3")
 
-mixer.music.play() #Playing Music with Pygame
-mixer.music.stop()
+# Play music
+mixer.music.play()
+
+# Keep the program running until song finishes
+while mixer.music.get_busy():
+    time.sleep(1)
+
+# # Stop (it will stop automatically when the song ends)
+# mixer.music.stop()
