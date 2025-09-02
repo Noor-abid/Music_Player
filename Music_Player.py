@@ -14,5 +14,6 @@ class Player:
         self.playing_state=False
         def load(self):
             self.music_file=filedialog.askopenfilename()
-            
-
+        def play(self):
+            if self.music_file:
+                mixer.init()
