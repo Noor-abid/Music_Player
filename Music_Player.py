@@ -17,3 +17,14 @@ class Player:
         def play(self):
             if self.music_file:
                 mixer.init()
+                mixer.music.load(self.music_file)
+                mixer.music.play()
+        def pause(self):
+            if not self.playing_state:
+                mixer.music.pause()
+                self.playing_state=True
+            else:
+                mixer.music.unpause()
+                self.playing_state=False
+        def stop(self):
+            mixer.music.stop()
